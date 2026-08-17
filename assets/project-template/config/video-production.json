@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "Evidence-first Video Project",
+    "default_language": "zh-CN",
+    "content_dir": "content",
+    "render_output_dir": "video/out"
+  },
+  "brand": {
+    "series_name": "你的栏目名",
+    "one_line_positioning": "用一句话说明观众每期会得到什么",
+    "audience_promise": "每期用一个可核验事实，讲清一件值得知道的事",
+    "voice": [
+      "直接",
+      "具体",
+      "克制"
+    ],
+    "fixed_closing": "如果这条对你有用，欢迎关注下一期。",
+    "banned_phrases": [
+      "震惊",
+      "万万没想到",
+      "谁的青春回来了"
+    ]
+  },
+  "editorial": {
+    "target_audience": "对事实、背景和变化感兴趣的移动端观众",
+    "topic_scope": [
+      "历史与当下",
+      "科技与消费",
+      "城市生活"
+    ],
+    "opening_commitment_seconds": 2,
+    "cover_payoff_deadline_seconds": 15,
+    "max_primary_facts_per_scene": 1,
+    "max_primary_motion_per_scene": 1
+  },
+  "platforms": [
+    {
+      "id": "vertical-video",
+      "label": "竖屏短视频",
+      "width": 1080,
+      "height": 1920,
+      "cover_ratio": "3:4",
+      "safe_area_px": {
+        "left": 80,
+        "right": 180,
+        "top": 120,
+        "bottom": 320
+      }
+    },
+    {
+      "id": "social-feed-cover",
+      "label": "信息流封面",
+      "width": 1080,
+      "height": 1260,
+      "cover_ratio": "6:7",
+      "safe_area_px": {
+        "left": 80,
+        "right": 80,
+        "top": 80,
+        "bottom": 120
+      }
+    }
+  ],
+  "production": {
+    "fps": 30,
+    "duration_seconds": {
+      "min": 45,
+      "target": 60,
+      "max": 60
+    },
+    "visual_score_min": 90,
+    "source_image_hold_seconds": {
+      "min": 2,
+      "max": 4
+    },
+    "audio": {
+      "peak_dbfs_min": -6,
+      "peak_dbfs_max": -1,
+      "bgm_below_voice_db": {
+        "min": 12,
+        "max": 18
+      },
+      "max_unintentional_silence_seconds": 0.5
+    },
+    "deterministic_frames": true
+  },
+  "evidence": {
+    "fact_classes": [
+      "event-fact",
+      "period-context",
+      "later-outcome"
+    ],
+    "minimum_primary_sources": 1,
+    "prefer_cross_check": true,
+    "required_asset_fields": [
+      "source",
+      "date",
+      "rights",
+      "is_event_scene"
+    ],
+    "generated_media_cannot_pose_as_evidence": true
+  },
+  "creative_boundaries": {
+    "template_structure_not_expression": true,
+    "evidence_before_emotion": true,
+    "independent_final_review": true,
+    "motion_is_vocabulary_not_layout": true
+  },
+  "review": {
+    "one_primary_variable_per_episode": true,
+    "early_check_hours": 24,
+    "mature_check_days": 7,
+    "rule_promotion": {
+      "minimum_positive_repetitions": 3,
+      "minimum_topic_categories": 2,
+      "requires_falsification_test": true,
+      "weekly_rule_change_limit": 2
+    }
+  },
+  "publishing": {
+    "require_explicit_authorization": true,
+    "default_action": "build-pending-package-only"
+  },
+  "delivery": {
+    "pending_dir": "publish/pending",
+    "backup_dir": ".backups/publish",
+    "manifest_file": "manifest.json",
+    "required_files": [
+      "video.mp4",
+      "cover-primary.png",
+      "cover-secondary.png",
+      "publishing.md",
+      "sources.md",
+      "manifest.json"
+    ],
+    "fail_on_verification_error": true
+  }
+}
+

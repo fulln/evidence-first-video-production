@@ -1,0 +1,24 @@
+{
+  "package_name": "YYYY-MM-DD-topic-slug",
+  "version": 1,
+  "duration_seconds": 60,
+  "metadata": {
+    "title": "本期标题",
+    "platforms": [
+      "vertical-video"
+    ],
+    "experiment_variable": "本期唯一变量",
+    "preserved_items": [
+      "事实边界",
+      "主体结构"
+    ]
+  },
+  "assets": {
+    "video.mp4": "video/out/final.mp4",
+    "cover-primary.png": "covers/cover-primary.png",
+    "cover-secondary.png": "covers/cover-secondary.png",
+    "publishing.md": "content/publishing.md",
+    "sources.md": "content/sources.md"
+  }
+}
+

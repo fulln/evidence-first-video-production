@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evidence-first Video Production"
+  short_description: "用事实门禁、分阶段验收和单变量实验稳定生产高质量短视频"
+  default_prompt: "使用 $evidence-first-video-production 为我的栏目初始化可配置的短视频生产系统。"
